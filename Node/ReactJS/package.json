@@ -1,0 +1,46 @@
+{
+  "name": "react-tutorials",
+  "version": "0.0.0",
+  "description": "A Second tutorial using ReactJS, React Router, and a single page application",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.0",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-plugin-react-html-attrs": "^2.0.0",
+    "babel-plugin-transform-class-properties": "^6.3.13",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "history": "^1.17.0",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "react-router": "^1.0.3",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.2.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.1.0"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --content-base src --inline --hot",
+    "start": "webpack-dev-server --progress --colors --content-base src",
+    "eslint": "eslint -c .eslintrc.json",
+    "pack": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbutler2901/ReactJS-Tut-1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sbutler2901/ReactJS-Tut-1/issues"
+  },
+  "homepage": "https://github.com/sbutler2901/ReactJS-Tut-1#readme"
+}

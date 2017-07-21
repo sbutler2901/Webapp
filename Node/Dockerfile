@@ -8,12 +8,13 @@ RUN apt-get install -y git nodejs npm vim
 
 ADD init.sh /srv/
 RUN chmod +x /srv/init.sh
-#RUN /srv/init.sh
+RUN /srv/init.sh
+
+Add ReactJS/* /srv/ReactJS/
 
 ADD start.sh /srv/
 RUN chmod +x /srv/start.sh
 
-ADD web_server.go /srv/
 
 EXPOSE 8080
 
