@@ -10,7 +10,7 @@ ADD init.sh /srv/
 RUN chmod +x /srv/init.sh
 RUN /srv/init.sh
 
-Add ReactJS/* /srv/ReactJS/
+Add ReactJS/ /srv/ReactJS/
 
 ADD start.sh /srv/
 RUN chmod +x /srv/start.sh
@@ -18,4 +18,4 @@ RUN chmod +x /srv/start.sh
 
 EXPOSE 8080
 
-#CMD ["/bin/bash", "/srv/start.sh"]
+CMD ["/bin/bash", "/srv/start.sh"]
