@@ -16,6 +16,6 @@ ADD start.sh /srv/
 RUN chmod +x /srv/start.sh
 
 
-EXPOSE 8080
+#EXPOSE 8080
 
 CMD ["/bin/bash", "/srv/start.sh"]

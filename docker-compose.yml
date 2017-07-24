@@ -1,25 +1,37 @@
 version: "3.2"
 services:
   nginx:
+      # Defines the Dockerfile loaction to build for this container
       build: ./Nginx
+      # Defines the name to give the built container image
+      image: nginx_node
+      # Provides links to a container in another service
+      # SERVICE_NAME:LINK_ALIAS (link_alias is optional)
+      # Containers for linked services will be reachabled at a hostname identical to the alias
+      # or, the service name if no alias is specified
       links:
-          - node1:node1
-          - node2:node2
-          - node3:node3
+          - react_node_1:node1
+          - react_node_2:node2
+          - react_node_3:node3
       ports:
-          - "80:80"
-  node1:
-      build: ./Node
+          # (HOST:CONTAINER) - defines the port exposed to the host which maps to the port exposed to the container
+          - "8080:80"
+  react_node_1:
+      build: ./React_Node
+      image: react_node
 #      links:
       ports:
-          - "8080"
-  node2:
-      build: ./Node
+        # The container's port exposed to other containers
+        - "8080"
+  react_node_2:
+      build: ./React_Node
+      image: react_node
 #      links:
       ports:
-          - "8080"
-  node3:
-      build: ./Node
+        - "8080"
+  react_node_3:
+      build: ./React_Node
+      image: react_node
 #      links:
       ports:
-          - "8080"
+        - "8080"
